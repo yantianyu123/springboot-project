@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!--<include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>-->
+
+    <contextName>支付宝扫码支付</contextName>
+
+    <!--输出到控制台 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%cn %d{hh:MM:ss} [%20logger{0}] - %message%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name = "com.yan.alipay">
+        <appender-ref ref = "STDOUT"/>
+    </logger>
+
+    <root level="debug"></root>
+
+
+</configuration>
